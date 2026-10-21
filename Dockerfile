@@ -1,11 +1,11 @@
-FROM node:20-alpine AS base
+FROM node:24.22.1-alpine AS base
 
 # Stage 1: Install dependencies
 FROM base AS deps
 RUN apk add --no-cache libc6-compat
 WORKDIR /app
 
-COPY package.json package-lock.json ./
+COPY package.json package-lock.json .npmrc ./
 COPY web-ui/package.json ./web-ui/
 RUN npm ci
 
