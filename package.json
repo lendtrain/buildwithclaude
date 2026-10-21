@@ -36,5 +36,11 @@
     "glob": "^11.0.3",
     "gray-matter": "^4.0.3"
   },
-  "devDependencies": {}
+  "devDependencies": {},
+  "engines": {
+    "node": ">=24.22.1 <25"
+  },
+  "overrides": {
+    "ws": "8.21.3"
+  }
 }
